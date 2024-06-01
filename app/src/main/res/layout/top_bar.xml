@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/back_top_bar"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/menu_bar" />
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/color_picker"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/color_picker" />
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/eraser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/eraser" />
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/pen1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/pencil_1" />
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/pen2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/pencil2" />
+
+</LinearLayout>
