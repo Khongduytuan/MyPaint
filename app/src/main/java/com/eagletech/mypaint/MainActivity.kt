@@ -96,11 +96,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        if (binding.subMenu.visibility == View.VISIBLE) {
-            binding.info.setOnClickListener {
-                showInfoDialog()
-            }
+
+        binding.info.setOnClickListener {
+            showInfoDialog()
         }
+
     }
 
     // Show dialog cho dữ liệu SharePreferences
@@ -163,7 +163,7 @@ class MainActivity : AppCompatActivity() {
             put(MediaStore.MediaColumns.MIME_TYPE, "image/png")
             put(
                 MediaStore.MediaColumns.RELATIVE_PATH,
-                "Pictures/MyDrawings"
+                "Pictures/MyPaints"
             ) // Tùy chỉnh đường dẫn theo nhu cầu của bạn
         }
         val imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
@@ -172,17 +172,17 @@ class MainActivity : AppCompatActivity() {
         if (myData.getSaves() > 0) {
             fos?.use {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)
-                Toast.makeText(this, "Image saved to gallery", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Image saved", Toast.LENGTH_SHORT).show()
                 myData.removeSaves()
             } ?: run {
-                Toast.makeText(this, "Failed to save image", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Failed save", Toast.LENGTH_SHORT).show()
             }
         } else if (myData.isPremiumSaves == true) {
             fos?.use {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)
-                Toast.makeText(this, "Image saved to gallery", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Image saved", Toast.LENGTH_SHORT).show()
             } ?: run {
-                Toast.makeText(this, "Failed to save image", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Failed save", Toast.LENGTH_SHORT).show()
             }
         } else {
             Toast.makeText(this, "You have run out of saves", Toast.LENGTH_SHORT).show()

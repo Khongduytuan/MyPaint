@@ -40,8 +40,8 @@ class PayActivity : AppCompatActivity() {
 
     private fun setClickItems() {
         buyBinding.save5img.setOnClickListener {
-//            myData.addSaves(2)
-            PurchasingService.purchase(save5image)
+            myData.addSaves(2)
+//            PurchasingService.purchase(save5image)
         }
         buyBinding.save10img.setOnClickListener {
             PurchasingService.purchase(save10image)
